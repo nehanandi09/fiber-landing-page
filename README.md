@@ -1,4 +1,21 @@
-# Getting Started with Create React App
+# Fiber landing Page - Codewell App
+
+## Overview
+
+A landing page for Fiber that makes portfolios for users. Inspired by the design from Codewell Challenges.
+Made using React and Chakra UI.
+
+## Screenshots
+
+- Desktop
+  ![](/Desktop_view.png)
+
+## Built using
+
+- React library
+- Chakra UI
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
