@@ -12,7 +12,7 @@ import {
 
 const Portfolio = () => {
   return (
-    <Box py={8} px={10} bg={"purple.800"} rounded={"md"}>
+    <Box py={8} px={10} bg={"purple.800"} rounded={"md"} w={"full"}>
       <Stack
         miniH={"100vh"}
         direction={{ base: "column", md: "row" }}
@@ -32,7 +32,7 @@ const Portfolio = () => {
               color={"purple.800"}
               fontWeight={"bold"}
               py={6}
-              w={"50%"}
+              w={{ base: "100%", md: "50%" }}
             >
               Start Free Trial
             </Button>
@@ -40,10 +40,12 @@ const Portfolio = () => {
         </Flex>
         <Image
           src={pageImage}
-          height={"xl"}
+          height={{ base: "md", md: "xl" }}
           px={4}
           position="relative"
           top={"8"}
+          fit={"cover"}
+          overflow={"hidden"}
         />
       </Stack>
     </Box>

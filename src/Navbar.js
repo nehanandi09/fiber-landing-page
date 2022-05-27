@@ -9,9 +9,11 @@ import {
   IconButton,
   useDisclosure,
   useBreakpointValue,
+  Collapse,
 } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GrClose } from "react-icons/gr";
+import DesktopNav from "./DesktopNav";
 
 const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
@@ -47,13 +49,7 @@ const Navbar = () => {
           Fiber
         </Text>
         <Flex display={{ base: "none", md: "flex" }}>
-          <Stack direction={"row"} spacing={12}>
-            {navItems.map((item, index) => (
-              <Link key={index} size="sm">
-                {item}
-              </Link>
-            ))}
-          </Stack>
+          <DesktopNav navItems={navItems} />
         </Flex>
         <Stack direction={"row"} spacing={12}>
           <Button
@@ -78,6 +74,7 @@ const Navbar = () => {
           </Button>
         </Stack>
       </Flex>
+      <Collapse in={isOpen} animateOpacity></Collapse>
     </Box>
   );
 };

@@ -30,7 +30,10 @@ const ReviewCard = () => {
   ];
   return (
     <Box py={12}>
-      <Flex justifyContent={"space-between"} direction="row">
+      <Flex
+        justifyContent={"space-between"}
+        direction={{ base: "column", md: "row" }}
+      >
         {users.map((user, index) => (
           <Flex
             p={4}
@@ -38,8 +41,9 @@ const ReviewCard = () => {
             borderColor={"blackAlpha.200"}
             rounded={"md"}
             key={index}
-            w={["30%", "50%", "33%"]}
+            w={["33%", "100%", "33%"]}
             direction={"column"}
+            marginBottom={8}
           >
             <Flex direction="row">
               <Image src={user.img} width={"50px"} height={"50px"} />

@@ -20,7 +20,11 @@ const Footer = () => {
   ];
   return (
     <Box px={"24"} bg={"purple.100"} py={8}>
-      <Flex py={8} direction="row" justifyContent={"space-between"}>
+      <Flex
+        py={8}
+        direction={{ base: "column", md: "row" }}
+        justifyContent={"space-between"}
+      >
         <Stack direction={{ base: "column" }}>
           <Heading size="xs">Fiber</Heading>
           <Text>

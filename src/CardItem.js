@@ -28,12 +28,16 @@ const CardItem = () => {
   return (
     <Flex
       py={"12"}
-      direction={"row"}
+      direction={{ base: "column", md: "row" }}
       spacing={12}
       justifyContent="space-between"
     >
       {items.map((item, index) => (
-        <Stack w={"400px"} spacing={"2"}>
+        <Stack
+          marginRight={"10"}
+          marginBottom={"10"}
+          spacing={{ base: "2", md: "2" }}
+        >
           <Image src={item.img} width={"32px"} height={"32px"} />
           <Heading size={"sm"}>{item.title}</Heading>
           <Text color={"blackAlpha.700"}>{item.description}</Text>

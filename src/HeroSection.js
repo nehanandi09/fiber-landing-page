@@ -20,7 +20,7 @@ const HeroSection = () => {
     <Box bg={"purple.100"} px={"24"}>
       <Stack
         miniH={"100vh"}
-        direction={{ base: "column", md: "row" }}
+        direction={{ base: "column-reverse", md: "row" }}
         alignItems={"center"}
       >
         <Flex py={8} flex={1} align={"centre"}>
@@ -58,6 +58,7 @@ const HeroSection = () => {
                 color={"white"}
                 fontWeight={"bold"}
                 py={6}
+                w={{ base: "full", md: "auto" }}
                 _hover={{ bg: "purple.900", color: "white" }}
               >
                 Start Free Trial
@@ -82,11 +83,11 @@ const HeroSection = () => {
             </Stack>
           </Stack>
         </Flex>
-        <Flex flex={1}>
+        <Flex flex={1} justifyContent={"center"}>
           <Image
             position={"relative"}
-            bottom={"10"}
-            right={"10"}
+            bottom={{ md: "10" }}
+            right={{ md: "10" }}
             src={heroImage}
             alt={"hero-image"}
           />
