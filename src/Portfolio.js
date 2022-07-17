@@ -40,7 +40,7 @@ const Portfolio = () => {
         </Flex>
         <Image
           src={pageImage}
-          height={{ base: "md", md: "xl" }}
+          height={{ md: "xl" }}
           px={4}
           position="relative"
           top={"8"}

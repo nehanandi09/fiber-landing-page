@@ -17,7 +17,7 @@ const HeroSection = () => {
   const noOfStars = 5;
   const checkedFeatures = ["No Credit Card Requried", "10 Free Templates"];
   return (
-    <Box bg={"purple.100"} px={"24"}>
+    <Box bg={"purple.100"} px={{ base: "10", md: "15", lg: "20" }}>
       <Stack
         miniH={"100vh"}
         direction={{ base: "column-reverse", md: "row" }}

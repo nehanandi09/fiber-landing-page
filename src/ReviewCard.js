@@ -41,14 +41,25 @@ const ReviewCard = () => {
             borderColor={"blackAlpha.200"}
             rounded={"md"}
             key={index}
-            w={["33%", "100%", "33%"]}
+            w={{ base: "100%", md: "33%" }}
             direction={"column"}
             marginBottom={8}
           >
-            <Flex direction="row">
+            <Flex
+              direction={{ base: "column", md: "row" }}
+              justifyContent={{ base: "center", md: "flex-start" }}
+              alignItems={{ base: "center" }}
+            >
               <Image src={user.img} width={"50px"} height={"50px"} />
-              <Flex direction={"column"} mx={4}>
-                <Heading size="16px" color={"purple.700"}>
+              <Flex
+                direction={"column"}
+                mx={4}
+                justifyContent={{ base: "center", md: "flex-start" }}
+              >
+                <Heading
+                  fontSize={{ base: "12px", md: "16px" }}
+                  color={"purple.700"}
+                >
                   {user.name}
                 </Heading>
                 <Text fontWeight={"thin"}>{user.subtitle}</Text>
@@ -62,6 +73,8 @@ const ReviewCard = () => {
               borderColor={"blackAlpha.100"}
               color={"purple.700"}
               marginTop={"auto"}
+              fontSize={{ nase: "12px", md: "16px" }}
+              wordBreak={"normal"}
               _hover={{ bg: "purple.900", color: "white" }}
             >
               View {user.name.split(" ")[0]}'s portfolio

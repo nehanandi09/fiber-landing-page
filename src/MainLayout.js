@@ -6,7 +6,7 @@ import Portfolio from "./Portfolio";
 
 const MainLayout = () => {
   return (
-    <Box p={"24"}>
+    <Box p={{ base: "10", md: "15", lg: "20" }}>
       <Stack direction={{ base: "column" }}>
         <Heading size="md" color={"purple.700"} fontWeight={"semibold"}>
           Why Fiber
